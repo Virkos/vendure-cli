@@ -1,4 +1,4 @@
 package ch.projectSE;
 
-public class TableFormatter {
+public class TableFormatter implements Formatter {
 }

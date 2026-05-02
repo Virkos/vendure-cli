@@ -1,4 +1,4 @@
 package ch.projectSE;
 
-public class JsonFormatter {
+public class JsonFormatter implements Formatter {
 }

@@ -20,19 +20,19 @@ public class JsonFormatterTest {
     @Test
     public void testContainsProductName() {
         JsonFormatter jsonFormatter = new JsonFormatter();
-        String result = formatter.format(products);
+        String result = jsonFormatter.format(products);
         assertTrue(result.contains("Monitor"));
     }
     @Test
     public void testContainsPrice() {
         JsonFormatter jsonFormatter = new JsonFormatter();
-        String result = formatter.format(products);
+        String result = jsonFormatter.format(products);
         assertTrue(result.contains("999"));
     }
     @Test
     public void testOutputIsValidJson() {
         JsonFormatter jsonFormatter = new JsonFormatter();
-        String result = formatter.format(products);
+        String result = jsonFormatter.format(products);
         assertTrue(result.startsWith("[") && result.endsWith("]"));
     }
 }

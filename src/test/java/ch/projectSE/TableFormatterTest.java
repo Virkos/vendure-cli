@@ -18,8 +18,8 @@ public class TableFormatterTest {
     @BeforeEach
     public void setUp(){
         products = new ArrayList<>();
-        products.add(new Product("Monitor", 999));
-        products.add(new Product("Keyboard", 100));
+        products.add(new Product("1", "Monitor", "monitor", "A great monitor"));
+        products.add(new Product("2", "Keyboard", "keyboard", "A mechanical keyboard"));
     }
     @Test
     public void testContainsProductName(){
@@ -29,10 +29,10 @@ public class TableFormatterTest {
 
     }
     @Test
-    public void testContainsPrice() {
+    public void testContainsSlug() {
         Formatter formatter = new TableFormatter();
         String result = formatter.format(products);
-        assertTrue(result.contains("999"));
+        assertTrue(result.contains("keyboard"));
     }
     @Test
     public void testEmptyList(){

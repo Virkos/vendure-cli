@@ -14,8 +14,8 @@ public class JsonFormatterTest {
     @BeforeEach
     public void setUp() {
         products = new ArrayList<>();
-        products.add(new Product("Monitor", 999));
-        products.add(new Product("Keyboard", 100));
+        products.add(new Product("1", "Monitor", "monitor", "A great monitor"));
+        products.add(new Product("2", "Keyboard", "keyboard", "A mechanical keyboard"));
     }
     @Test
     public void testContainsProductName() {
@@ -24,10 +24,10 @@ public class JsonFormatterTest {
         assertTrue(result.contains("Monitor"));
     }
     @Test
-    public void testContainsPrice() {
+    public void testContainsSlug() {
         JsonFormatter jsonFormatter = new JsonFormatter();
         String result = jsonFormatter.format(products);
-        assertTrue(result.contains("999"));
+        assertTrue(result.contains("keyboard"));
     }
     @Test
     public void testOutputIsValidJson() {

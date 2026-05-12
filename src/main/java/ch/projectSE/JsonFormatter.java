@@ -10,8 +10,9 @@ public class JsonFormatter implements Formatter {
         for (int i = 0; i < products.size(); i++) {
             Product p = products.get(i);
             sb.append("  {\n");
-            sb.append("    \"name\": \"").append(p.getName()).append("\",\n");
-            sb.append("    \"price\": ").append(p.getPrice()).append("\n");
+            sb.append("    \"id\": \"").append(p.getId()).append("\",\n");
+            sb.append("    \"name\": ").append(p.getName()).append("\n");
+            sb.append("    \"slug\": \"").append(p.getSlug()).append("\"\n");
             sb.append("  }");
             if (i < products.size() - 1) sb.append(",");
             sb.append("\n");

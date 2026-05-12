@@ -6,10 +6,10 @@ public class TableFormatter implements Formatter {
     @Override
     public String format(List<Product> products) {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("%-20s %s%n", "Name", "Price"));
-        sb.append("-".repeat(30)).append("\n");
+        sb.append(String.format("%-5s %-25s %s%n", "ID", "Nom", "Slug"));
+        sb.append("-".repeat(50)).append("\n");
         for (Product p : products) {
-            sb.append(String.format("%-20s %d%n", p.getName(), p.getPrice()));
+            sb.append(String.format("%-5s %-25s %s%n", p.getId(), p.getName(), p.getSlug()));
         }
         return sb.toString();
     }
